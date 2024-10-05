@@ -34,4 +34,4 @@ BigQuery - Para análisis de los datos.
 Orlando Echeverría Hernández
 Expresiones de Gratitud 🎁
 Comparte este proyecto con otros.
-Invita a tus colegas a colaborar en el proyecto.
+
