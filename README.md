@@ -12,7 +12,7 @@ BigQuery: Permite realizar consultas y análisis sobre los datos ya procesados.
 Archivos de Código
 Función: allp
 Esta función obtiene datos de varias APIs de transporte público de Santiago de Chile, procesa la información y la almacena en Google Cloud Storage en formato CSV.
-![](https://github.com/Echeverria29/DataGCPFinal/edit/main/ark2.png)
+![](https://github.com/Echeverria29/DataGCPFinal/blob/main/ark2.png)
 
 # Pre-requisitos 📋
 Google Cloud SDK: Para la administración de tus proyectos en Google Cloud. Puedes descargarlo aquí.
