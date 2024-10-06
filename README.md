@@ -1,7 +1,7 @@
 
 # Proyecto de ETL y Análisis de Datos con Google Cloud Functions y BigQuery
 Este proyecto tiene como objetivo principal extraer, transformar y cargar datos relacionados con servicios de transporte público desde diversas APIs, para luego almacenar los datos en Google Cloud Storage y procesarlos en BigQuery para su análisis posterior.
-
+![](https://github.com/Echeverria29/DataGCPFinal/blob/main/gcp2.png)
 # Descripción del Proyecto 🚀
 Este proyecto de inteligencia de negocios utiliza tecnologías como Google Cloud Functions, BigQuery, y Google Cloud Storage para automatizar el proceso ETL (Extract, Transform, Load). Los datos recolectados desde múltiples APIs son almacenados en Google Cloud Storage y procesados para ser enviados a BigQuery, donde se pueden realizar análisis y consultas para facilitar la toma de decisiones.
 
