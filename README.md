@@ -1,37 +1,79 @@
+# Proyecto de ETL para Transporte Público
 
-# Proyecto de ETL y Análisis de Datos con Google Cloud Functions y BigQuery
-Este proyecto tiene como objetivo principal extraer, transformar y cargar datos relacionados con servicios de transporte público desde diversas APIs, para luego almacenar los datos en Google Cloud Storage y procesarlos en BigQuery para su análisis posterior.
-![](https://github.com/Echeverria29/DataGCPFinal/blob/main/gcp2.png)
-# Descripción del Proyecto 🚀
-Este proyecto de inteligencia de negocios utiliza tecnologías como Google Cloud Functions, BigQuery, y Google Cloud Storage para automatizar el proceso ETL (Extract, Transform, Load). Los datos recolectados desde múltiples APIs son almacenados en Google Cloud Storage y procesados para ser enviados a BigQuery, donde se pueden realizar análisis y consultas para facilitar la toma de decisiones.
+Este proyecto tiene como objetivo principal extraer, transformar y cargar datos relacionados con servicios de transporte público desde diversas APIs. Los datos extraídos se almacenan en Google Cloud Storage y se procesan en BigQuery para realizar análisis posteriores que apoyen la toma de decisiones.
 
-# Arquitectura de la Solución 🏗️
-Google Cloud Functions: Se encargan de hacer las solicitudes a las APIs, procesar los datos, y guardarlos en Google Cloud Storage y BigQuery.
-Google Cloud Storage: Almacena los archivos CSV descargados desde las APIs.
-BigQuery: Permite realizar consultas y análisis sobre los datos ya procesados.
-Archivos de Código
-Función: allp
-Esta función obtiene datos de varias APIs de transporte público de Santiago de Chile, procesa la información y la almacena en Google Cloud Storage en formato CSV.
-![](https://github.com/Echeverria29/DataGCPFinal/blob/main/ark2.png)
+![](images/ark2.png)
 
-# Pre-requisitos 📋
-Google Cloud SDK: Para la administración de tus proyectos en Google Cloud. Puedes descargarlo aquí.
-Configuración de Google Cloud Functions y BigQuery.
-Permisos en Google Cloud Storage para almacenar los archivos CSV y en BigQuery para realizar consultas.
-# Instalación 🔧
-Configura tus funciones en Google Cloud Functions.
-Crea un bucket en Google Cloud Storage y asegura que las funciones tengan permisos para acceder al bucket.
-Configura BigQuery con el dataset correspondiente.
-# Ejecución del Proyecto ⚙️
-La función allp realizará las solicitudes a las APIs y almacenará los resultados en Google Cloud Storage.
-La función f_cole_m descargará archivos CSV y los almacenará también en Google Cloud Storage.
-La función data1 procesará los archivos y los enviará a BigQuery.
-# Construido con 🛠️
-Google Cloud Functions - Para la automatización del proceso ETL.
-Google Cloud Storage - Para almacenamiento de los archivos CSV.
-BigQuery - Para análisis de los datos.
-# Autor ✒️
-Orlando Echeverría Hernández
-Expresiones de Gratitud 🎁
-Comparte este proyecto con otros.
+## Contenido
+- [Requisitos](#requisitos)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Instrucciones de Ejecución](#instrucciones-de-ejecución)
 
+---
+
+## Requisitos
+
+Para ejecutar este proyecto, necesitas:
+
+- **Google Cloud Platform (GCP)**: 
+  - Configuración de Google Cloud Storage para almacenar datos.
+  - BigQuery para procesar los datos.
+- **APIs de Transporte Público**: Acceso a las APIs de las cuales se extraerán los datos.
+- **Python**: Instalación de Jupyter Notebook y bibliotecas necesarias para la ejecución de los notebooks.
+- **Credenciales de GCP**: Un archivo JSON con las credenciales de servicio para interactuar con la plataforma.
+
+Instala las dependencias del proyecto ejecutando:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Estructura del Proyecto
+
+El proyecto está organizado de la siguiente manera:
+
+- **files/**
+  Contiene documentos relacionados con el proyecto:
+  - `Informe TRANSPORTEPUBLICO.docx` - Informe técnico del proyecto.
+  - `Presentación Examen.pptx` - Presentación relacionada con el examen final del proyecto.
+
+- **images/**
+  Contiene imágenes relacionadas con la arquitectura y el flujo del proyecto:
+  - `ark2.png` - Arquitectura del proyecto.
+  - `gcp2.png` - Representación visual del uso de GCP.
+
+- **scripts/**
+  Contiene los notebooks de Jupyter que implementan los diferentes procesos del proyecto:
+  - `DataMetro.ipynb` - Extracción y transformación de datos del sistema de metro.
+  - `DatapuenteAll.ipynb` - Procesamiento de datos relacionados con conexiones entre servicios.
+  - `EXAMENCOLABFINAL.ipynb` - Notebook para la ejecución de un análisis específico.
+  - `TriggerMetaData.ipynb` - Automatización de procesos mediante triggers de metadatos.
+
+## Instrucciones de Ejecución
+
+### 1. Configuración del Entorno
+
+1. Configura tus credenciales de GCP descargando el archivo JSON correspondiente y colócalo en el directorio raíz del proyecto.
+2. Configura tus variables de entorno para que Python pueda autenticarte en GCP:
+   ```bash
+   export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/credentials.json"
+   ```
+
+### 2. Ejecución de Notebooks
+
+1. Abre un terminal y ejecuta Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+2. Navega a la carpeta `scripts/` y abre los notebooks necesarios.
+3. Ejecuta los notebooks en el siguiente orden:
+   - `DataMetro.ipynb`: Para extraer y transformar datos del sistema de metro.
+   - `DatapuenteAll.ipynb`: Para procesar datos relacionados con servicios de transporte conectados.
+   - `TriggerMetaData.ipynb`: Para automatizar procesos relacionados con metadatos.
+
+### 3. Almacenamiento y Análisis
+
+1. Verifica que los datos procesados se hayan almacenado correctamente en Google Cloud Storage.
+2. Utiliza BigQuery para ejecutar consultas sobre los datos almacenados y generar informes.
+
+---
